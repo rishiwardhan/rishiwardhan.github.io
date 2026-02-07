@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff4e8d, #ff9a9e);
+}
+
+/* Card container */
+.card {
+  width: 420px;
+  height: 280px;
+  perspective: 1200px;
+}
+
+/* Inner card */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Open on hover */
+.card:hover .card-inner {
+  transform: rotateY(-180deg);
+}
+
+/* Front & inside */
+.card-front,
+.card-inside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Front design */
+.card-front {
+  background: linear-gradient(135deg, #ff0066, #ffcc70);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front h1 {
+  font-size: 26px;
+}
+
+.card-front p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Inside design */
+.card-inside {
+  background: #fff0f5;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.card-inside h2 {
+  color: #ff2e74;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 110px;
+  resize: none;
+  border-radius: 10px;
+  border: 2px solid #ff9abf;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 10px;
+  color: #ff5a9e;
+  font-weight: bold;
+}
