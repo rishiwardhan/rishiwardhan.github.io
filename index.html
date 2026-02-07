@@ -1,32 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Valentine Greeting Card</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>Valentine Card 💖</title>
+
+<style>
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff4e8d, #ff9a9e);
+}
+
+.card {
+  width: 420px;
+  height: 280px;
+  perspective: 1200px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(-180deg);
+}
+
+.card-front, .card-inside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-front {
+  background: linear-gradient(135deg, #ff0066, #ffcc70);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front h1 {
+  font-size: 26px;
+}
+
+.card-inside {
+  background: #fff0f5;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.card-inside h2 {
+  color: #ff2e74;
+}
+
+.message {
+  margin-top: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.5;
+  border: 2px solid #ff9abf;
+}
+
+.signature {
+  margin-top: 12px;
+  text-align: right;
+  font-weight: bold;
+  color: #ff5a9e;
+}
+</style>
 </head>
+
 <body>
 
 <div class="card">
   <div class="card-inner">
     
-    <!-- Front -->
+    <!-- FRONT -->
     <div class="card-front">
       <h1>💖 Happy Valentine’s Day 💖</h1>
       <p>Hover to open</p>
     </div>
 
-    <!-- Inside -->
+    <!-- INSIDE -->
     <div class="card-inside">
       <h2>For My Valentine 💌</h2>
-      <textarea placeholder="Write your message here..."></textarea>
-      <p class="signature">— Yours rishi..❤️</p>
+
+      <!-- ✍️ WRITE YOUR MESSAGE BELOW -->
+      <p class="message">
+        You are the reason my ordinary days feel special.
+        Thank you for being you, for your kindness,
+        and for the way you make me smile without even trying.
+        I’m really grateful to have you in my life. 💕
+      </p>
+
+      <div class="signature">
+        — Yours ❤️
+      </div>
     </div>
 
   </div>
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
+
 
