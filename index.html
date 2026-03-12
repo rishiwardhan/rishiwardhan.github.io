@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our 1.5 Year Journey ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>Our 1.5 Year Journey ❤️</h1>
+<p>A map of all the beautiful memories we created together</p>
+</header>
+
+<div class="map-container">
+
+<div class="path"></div>
+
+<!-- Memory 1 -->
+
+<div class="stop">
+<div class="card"
+onclick="showPreview('photo1.png','The Day We Met','This was the beginning of everything. I never knew this moment would change my life forever.')">
+
+<img src="photo1.png">
+
+<div class="card-content">
+<p class="date">The Day We Met</p>
+<p>Click to relive the memory ❤️</p>
+</div>
+
+</div>
+</div>
+
+<!-- Memory 2 -->
+
+<div class="stop">
+<div class="card"
+onclick="showPreview('photo2.png','Our First Date','The day we laughed endlessly and realized how special this bond was.')">
+
+<img src="photo2.png">
+
+<div class="card-content">
+<p class="date">Our First Date</p>
+<p>Click to relive the memory ❤️</p>
+</div>
+
+</div>
+</div>
+
+<!-- Memory 3 -->
+
+<div class="stop">
+<div class="card"
+onclick="showPreview('photo3.png','First Trip Together','Every moment with you felt magical and unforgettable.')">
+
+<img src="photo3.png">
+
+<div class="card-content">
+<p class="date">First Trip Together</p>
+<p>Click to relive the memory ❤️</p>
+</div>
+
+</div>
+</div>
+
+<!-- Memory 4 -->
+
+<div class="stop">
+<div class="card"
+onclick="showPreview('photo4.png','One of Our Favorite Memories','This day will always stay in my heart forever.')">
+
+<img src="photo4.png">
+
+<div class="card-content">
+<p class="date">One of Our Favorite Memories</p>
+<p>Click to relive the memory ❤️</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<!-- Secret Message -->
+
+<div class="message-section">
+
+<h2>A Special Message For You ❤️</h2>
+
+<button onclick="revealMessage()">Click To Reveal My Message</button>
+
+<div id="secretMessage">
+
+You are the most beautiful part of my life.  
+These 1.5 years with you have been the happiest moments I’ve ever had.  
+Every memory, every laugh, every second with you means everything to me.  
+And this is only the beginning of our forever ❤️
+
+</div>
+
+</div>
+
+
+<footer>
+
+<h2>1.5 Years Down… Forever to Go ❤️</h2>
+
+</footer>
+
+
+<!-- Memory Viewer -->
+
+<div class="preview" id="preview">
+
+<div class="preview-content">
+
+<img id="previewImg">
+
+<div class="preview-text">
+
+<h2 id="previewTitle"></h2>
+
+<p id="previewDesc"></p>
+
+<button class="close" onclick="closePreview()">Close</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
